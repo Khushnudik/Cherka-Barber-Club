@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
+import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } from 'react'
 import {
   ArrowDown, ArrowRight, ArrowUpRight, CalendarDays, Check, CheckCircle2, ChevronDown, ChevronLeft, ChevronRight,
   Clock3, Instagram, MapPin, Menu, MessageCircle, Phone, Quote, Scissors, ShieldCheck, Sparkles, Star, X,
@@ -34,7 +34,7 @@ function Brand({ light = false }: { light?: boolean }) {
   return <a href="#home" className={`brand${light ? ' brand-light' : ''}`} aria-label={`${site.name} — на главную`}><span className="brand-mark"><span>C</span></span><span className="brand-word"><b>{site.name}</b><small>{site.descriptor}</small></span></a>
 }
 
-function SectionHeading({ eyebrow, title, description, centered = false }: { eyebrow: string; title: string; description?: string; centered?: boolean }) {
+function SectionHeading({ eyebrow, title, description, centered = false }: { eyebrow: string; title: ReactNode; description?: ReactNode; centered?: boolean }) {
   return <div className={`section-heading reveal${centered ? ' center' : ''}`}><span className="eyebrow"><i />{eyebrow}</span><h2>{title}</h2>{description && <p>{description}</p>}</div>
 }
 

@@ -18,6 +18,14 @@ npm run build
 npm run preview
 ```
 
+## Публикация сайта на GitHub Pages
+
+Репозиторий автоматически собирает и публикует сайт на GitHub Pages при каждом push в ветку `main` (workflow: `.github/workflows/pages.yml`). После успешного первого запуска Actions сайт будет доступен по адресу:
+
+**https://khushnudik.github.io/Cherka-Barber-Club/**
+
+Если GitHub попросит настроить публикацию, откройте **Settings → Pages** репозитория и выберите **Build and deployment → Source → GitHub Actions**. Сборка Vite настроена на адрес репозитория; локальный `npm run dev` остаётся на корневом адресе.
+
 ## Структура проекта
 
 ```text
